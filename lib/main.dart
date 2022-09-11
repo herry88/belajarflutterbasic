@@ -7,11 +7,33 @@ void main() {
 class MyApp extends StatelessWidget {
   //titleSection
   Widget titleSection = Container(
+    padding: const EdgeInsets.all(32),
     child: Row(
       children: [
         Expanded(
-          child: Text('Hello World'),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: const Text(
+                  'Destinasi Kamping',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Text(
+                'Danau XYZ',
+                style: TextStyle(color: Colors.grey[500]),
+              ),
+            ],
+          ),
         ),
+        Icon(
+          Icons.start,
+          color: Colors.yellow,
+        )
       ],
     ),
   );
